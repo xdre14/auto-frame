@@ -9,8 +9,7 @@ div {
     text-align: center;
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 800;
-    
+    font-weight: 800;    
   }
   label{
     color: white;
@@ -25,8 +24,8 @@ div {
     min-height: 25px !important;
     text-align: center;
     justify-content: center;
-    padding-top: 3px;
-    padding-bottom:  15px;
+    padding-top: 13px;
+    padding-bottom:  10px;
     border-bottom: 3px solid;
     border-top: 3px solid;
     background-color: white;
