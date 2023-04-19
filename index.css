@@ -1,0 +1,149 @@
+div {
+    min-height: 25px !important;
+    
+  }
+  .body {
+    background-image: url(img/purple-back.jpg)
+  }
+  .title {
+    text-align: center;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    
+  }
+  label{
+    color: white;
+  }
+  .options{
+    display: flex;
+    flex-wrap: row;
+  }
+  #editor {
+    display: flex;
+    height: 27px !important;
+    min-height: 25px !important;
+    text-align: center;
+    justify-content: center;
+    padding-top: 3px;
+    padding-bottom:  15px;
+    border-bottom: 3px solid;
+    border-top: 3px solid;
+    background-color: white;
+  }
+  #editor:before {
+    content: attr(data-placeholder);
+    color: gray;
+  }
+  #editor.focused:before {
+    display: none;
+  }
+  .editor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #111111;
+  }
+  .save-btn {
+  margin: 10px;
+  }
+  .btn_emoji {
+    margin-right: 350px;
+  }
+  .emoji_save-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+   margin-left: 25%;
+    
+  }
+  #save-btn {
+    margin-right: 25px;
+  }
+  .toolbar > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .text-editor {
+    width: 100%;
+  }
+  
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  .wrapper {
+    position: relative;
+  }
+  
+  .border {
+    position: absolute;
+    border: 1px solid black;
+  }
+  
+  .border.top {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+  }
+  
+  .border.left {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+  }
+  
+  .border.right {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+  }
+  
+  #editor-container {
+    padding-top: 20px;
+    text-align: center;
+  
+    
+  }
+  .wrapper{
+    border: 20px solid black;
+    border-radius: 15px;
+    border-bottom: 55px;
+  }
+  .nomer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  
+  .emoji-panel{
+    display: inline-block;
+    padding: 0%;
+    margin: 0%;
+  }
+  .emoji-logo {
+    width: 25px;
+    height: 25px;
+    background-size: 10px;
+    vertical-align: middle;
+  }
+  
+  form {
+  margin-top: 25px;
+  }

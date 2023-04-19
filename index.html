@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Редагування тексту</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css" disabled>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/jquery.html2canvas.js"></script>
+
+
+</head>
+
+<body class="body">
+  <header class="title">
+    <h1>Конструктор авторамки </h1>
+    <p>Створіть свою унікальну авторамку</p>
+  </header>
+  <main>
+    <div id="editor-container">
+      <div class="frame-container">
+        <div class="wrapper">
+          <img src="img/nomer2.png" alt="nomer" class="nomer">
+          <div id="editor" contenteditable="true" data-placeholder="Введіть текст сюди"></div>
+        </div>
+
+
+        <div id="options">
+          <label for="text-color">Колір тексту:</label>
+          <input type="color" id="text-color" value="#000000">
+          <label for="background-color">Колір фону:</label>
+          <input type="color" id="background-color" value="#ffffff">
+          <label for="font-select">Шрифт:</label>
+          <select id="font-select">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Palatino Linotype">Palatino Linotype</option>
+            <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+            <option value="Tahoma">Tahoma</option>
+          </select>
+          <label for="font-size">Розмір шрифту:</label>
+          <input type="range" id="font-size" min="8" max="27" step="1" value="16">
+          <label for="letter-spacing">Інтервал між літерами:</label>
+          <input type="range" id="letter-spacing" min="-10" max="15" step="0.1" value="0">
+          <div class="emoji_save-container">
+            <div id="save-button"></div>
+            <button id="save-btn">Зберегти зображення</button>
+
+            <button class="btn_emoji" onclick="openEmojiPanel()">Вставити емоджі</button>
+          </div>
+          <div id="emoji-panel" style="display:none;">
+            <img src="img/bmw.png" alt="bmw-logo" class="emoji-logo" onclick="insertImage('img/bmw.png', 24, 24)">
+            <img src="img/audi.png" alt="audi-logo" class="emoji-logo" onclick="insertImage('img/audi.png', 24, 24)">
+            <img src="img/mercedes.png" alt="mercedes-logo" class="emoji-logo"
+              onclick="insertImage('img/mercedes.png', 24, 24)">
+            <img src="img/renaut.png" alt="renaut-logo" class="emoji-logo"
+              onclick="insertImage('img/renaut.png', 24, 24)">
+            <img src="img/wolksvagen.png" alt="wolksvagen-logo" class="emoji-logo"
+              onclick="insertImage('img/wolksvagen.png', 24, 24)">
+            <img src="img/lada.png" alt="lada-logo" class="emoji-logo" onclick="insertImage('img/lada.png', 24, 24)">
+            <img src="img/ford.png" alt="ford-logo" class="emoji-logo" onclick="insertImage('img/ford.png', 24, 24)">
+            <img src="img/nissan.png" alt="nissan-logo" class="emoji-logo"
+              onclick="insertImage('img/nissan.png', 24, 24)">
+            <img src="img/opel.png" alt="opel-logo" class="emoji-logo" onclick="insertImage('img/opel.png', 24, 24)">
+            <img src="img/pego.png" alt="pego-logo" class="emoji-logo" onclick="insertImage('img/pego.png', 24, 24)">
+            <img src="img/porsche.png" alt="porsche-logo" class="emoji-logo"
+              onclick="insertImage('img/porsche.png', 24, 24)">
+            <img src="img/skoda.png" alt="skoda-logo" class="emoji-logo" onclick="insertImage('img/skoda.png', 24, 24)">
+            <img src="img/toyota.png" alt="toyota-logo" class="emoji-logo"
+              onclick="insertImage('img/toyota.png', 24, 24)">
+            <img src="img/volvo.png" alt="volvo-logo" class="emoji-logo" onclick="insertImage('img/volvo.png', 24, 24)">
+            <img src="img/010-120-hyundai.png" alt="hyundai-logo" class="emoji-logo"
+              onclick="insertImage('img/010-120-hyundaipng', 24, 24)">
+            <img src="img/honda.png" alt="honda-logo" class="emoji-logo" onclick="insertImage('img/honda.png', 24, 24)">
+            <img src="img/chevrolet.png" alt="chevrolet-logo" class="emoji-logo"
+              onclick="insertImage('img/chevrolet.png', 24, 24)">
+            <img src="img/dodge.png" alt="dodge-logo" class="emoji-logo" onclick="insertImage('img/dodge.png', 24, 24)">
+            <img src="img/porsche.png" alt="porsche-logo" class="emoji-logo"
+              onclick="insertImage('img/porsche.png', 24, 24)">
+            <img src="img/Ukraine.png" alt="Ukraine-logo" class="emoji-logo"
+              onclick="insertImage('img/Ukraine.png', 24, 24)">
+            <img src="img/Ukraine_2.png" alt="Ukraine_2-logo" class="emoji-logo"
+              onclick="insertImage('img/Ukraine_2.png', 24, 24)">
+            <img src="img/United-States2.png" alt="United-States2-logo" class="emoji-logo"
+              onclick="insertImage('img/United-States2.png', 24, 24)">
+            <img src="img/United-States.png" alt="United-States-logo" class="emoji-logo"
+              onclick="insertImage('img/United-States.png', 24, 24)">
+            <img src="img/phone-white-s.png" alt="phone-white-s-logo" class="emoji-logo"
+              onclick="insertImage('img/phone-white-s.png', 24, 24)">
+            <img src="img/phone-white-s2.png" alt="phone-white-s2-logo" class="emoji-logo"
+              onclick="insertImage('img/phone-white-s2.png', 24, 24)">
+            <img src="img/phone-black-s.png" alt="phone-black-s-logo" class="emoji-logo"
+              onclick="insertImage('img/phone-black-s.png', 24, 24)">
+            <img src="img/phone-black-s2.png" alt="phone-black-s2logo" class="emoji-logo"
+              onclick="insertImage('img/phone-black-s2.png', 24, 24)">
+            <img src="img/insta.png" alt="insta-logo" class="emoji-logo" onclick="insertImage('img/insta.png', 24, 24)">
+            <img src="img/facebook.png" alt="facebook-logo" class="emoji-logo"
+              onclick="insertImage('img/facebook.png', 24, 24)">
+            <img src="img/youtube.png" alt="youtube-logo" class="emoji-logo"
+              onclick="insertImage('img/youtube.png', 24, 24)">
+            <img src="img/batman.png" alt="batman-logo" class="emoji-logo"
+              onclick="insertImage('img/batman.png', 24, 24)">
+            <img src="img/superman.png" alt="superman-logo" class="emoji-logo"
+              onclick="insertImage('img/superman.png', 24, 24)">
+            <img src="img/decor-1.png" alt="decor-1-logo" class="emoji-logo"
+              onclick="insertImage('img/decor-1.png', 24, 24)">
+
+
+          </div>
+        </div>
+
+        <form action="https://formsubmit.co/krynytskiyandrew@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Ваші доповнення" required>
+          <input type="email" name="email" placeholder="Ваша пошта" required>
+          <button type="submit">Надіслати</button>
+        </form>
+
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" disabled></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="project.js"></script>
+  <script src="emoji.js"></script>
+  <script src="options.js"></script>
+  <script src="size.js"></script>
+</body>
+
+</html>
